@@ -3,6 +3,12 @@ Cargol
 
 A short and sequential molecular dynamics code
 
+.. figure:: logo.png
+        :width: 400px
+        :align: center
+
+::
+
                                \____       ________             
                                /    \     /  ____  \           
                                \_    \   /  /    \  \     -- 
