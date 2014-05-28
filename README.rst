@@ -9,7 +9,8 @@ A short and sequential molecular dynamics code
 
 This molecular simulation code comes without any guaranties. The main
 goal of this code is to quickly take a tour of a molecular dynamics program and
-to see the diffrent parts if it.
+see the diffrent parts it contains. For example it could be used for educational purpose 
+either in chemical physics or in order to develop programming skills.
 
 This code is under GPL Licence .
 
