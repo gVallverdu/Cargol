@@ -4,18 +4,8 @@ Cargol
 A short and sequential molecular dynamics code
 
 .. figure:: logo.png
-        :width: 400px
-        :align: center
-
-::
-
-                               \____       ________             
-                               /    \     /  ____  \           
-                               \_    \   /  /    \  \     -- 
-                                 \    \ (   \__/  )  )    --  
-                                  \    \_\ \_____/  /__    --
-                                   \______\________/___'=-   
-
+    :width: 400px
+    :align: center
 
 This molecular simulation code comes without any guaranties. The main
 goal of this code is to quickly take a tour of a molecular dynamics program and

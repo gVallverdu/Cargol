@@ -1,0 +1,96 @@
+# liste de toutes les dependences :
+tirage.o: gaussienne.o
+tirage.o: main.h
+tirage.o: extern.h
+
+init_calcul.o: main.h
+init_calcul.o: variables_globales.h
+init_calcul.o: force_ene.o
+init_calcul.o: print.o
+init_calcul.o: start_vitesse.o
+init_calcul.o: start_configuration.o
+init_calcul.o: read_configuration.o
+init_calcul.o: voisin.o
+
+start_vitesse.o: main.h
+start_vitesse.o: extern.h
+start_vitesse.o: gaussienne.o
+
+start_configuration.o: main.h
+start_configuration.o: extern.h
+
+read_configuration.o: main.h
+read_configuration.o: extern.h
+
+main.o: main.h
+main.o: extern.h
+main.o: brownien.o
+main.o: dynamique.o
+main.o: init_calcul.o
+
+dynamique.o: main.h
+dynamique.o: extern.h
+dynamique.o: position.o
+dynamique.o: voisin.o
+dynamique.o: periodic_cond.o
+dynamique.o: vitesse.o
+dynamique.o: force_ene.o
+dynamique.o: moyenne.o
+dynamique.o: print.o
+dynamique.o: free.o
+dynamique.o: tirage.o
+
+position.o: main.h
+position.o: positionNVE.o
+position.o: positionLNVT.o
+
+positionNVE.o: main.h
+positionNVE.o: extern.h
+
+positionLNVT.o: main.h
+positionLNVT.o: extern.h
+
+voisin.o: main.h
+voisin.o: extern.h
+
+vitesse.o: main.h
+vitesse.o: vitesseNVE.o
+vitesse.o: vitesse_langevin.o
+vitesse.o: vitesseLNVT.o
+
+vitesseNVE.o: main.h
+vitesseNVE.o: extern.h
+
+vitesse_langevin.o: main.h
+vitesse_langevin.o: extern.h
+vitesse_langevin.o: gaussienne.o
+
+vitesseLNVT.o: main.h
+vitesseLNVT.o: extern.h
+vitesseLNVT.o: gaussienne.o
+
+force_ene.o: main.h
+force_ene.o: extern.h
+force_ene.o: force_DPD.o
+
+force_DPD.o: main.h
+force_DPD.o: extern.h
+force_DPD.o: gaussienne.o
+force_DPD.o: tirage.o
+
+periodic_cond.o: main.h
+periodic_cond.o: extern.h
+
+moyenne.o: main.h
+moyenne.o: extern.h
+
+print.o: main.h
+print.o: extern.h
+
+free.o: main.h
+free.o: extern.h
+
+brownien.o: main.h
+brownien.o: extern.h
+brownien.o: gaussienne.o
+

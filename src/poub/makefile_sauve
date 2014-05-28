@@ -1,0 +1,62 @@
+
+# -------------------------------------------------------------------
+#
+#   makefile 
+#
+# -------------------------------------------------------------------
+
+# nom de l'executable :
+EXECUTABLE = cargol
+
+# choix du compilateur :
+COMPILATEUR = gcc
+
+# options compilations :
+OPTIONS = -c -O3 -Wall -Wextra 
+
+# liste de tous les objets :
+OBJ=	brownien.o \
+	init_calcul.o \
+	start_vitesse.o \
+	start_configuration.o \
+	read_configuration.o \
+	dynamique.o \
+	position.o \
+	positionNVE.o \
+	positionLNVT.o \
+	voisin.o \
+	vitesse.o \
+	vitesseNVE.o \
+	vitesse_langevin.o \
+	vitesseLNVT.o \
+	force_ene.o \
+	force_DPD.o \
+	periodic_cond.o \
+	moyenne.o \
+	gaussienne.o \
+	tirage.o \
+	print.o \
+	free.o \
+	main.o
+
+# commande par defaut
+all: install
+
+# édition de lien de tous les objets (-lm pour la lib math.h)
+install: $(OBJ) 
+	$(COMPILATEUR) $(OBJ) -o $(EXECUTABLE) -lm 
+	mv $(EXECUTABLE) ../
+	mv *.o ../obj/
+
+# on compile tous les fichiers sources :
+%.o: %.c
+	$(CC) $(OPTIONS) $*.c
+
+# dependances :
+include dependances
+
+# pour effacer tous les objet
+.PHONY: clean
+clean:
+	rm -rf ../obj/*.o
+
