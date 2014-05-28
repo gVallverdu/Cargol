@@ -13,6 +13,19 @@ to see the diffrent parts if it.
 
 This code is under GPL Licence .
 
+contenu
+-------
+
+Source and header files are respectivelly in directories ``src`` and
+``include``. The ``doc`` directroy contains a partial documentation. The
+``inputs`` directory contains examples of input files.
+
+Finally, the ``cargol_struct`` directroy contains a more object oriented
+version of the code. In this version, data are store in new defined C-types.
+Nevertheless, this version was not used a lot and may contains critical bugs.
+Thus, if you try to use it, take care about the results and compare with the
+standard version.
+
 installation
 ------------
 
@@ -38,18 +51,18 @@ différente.
 utilisation
 -----------
 
-Le dossier inputs/ contient des exemples de fichiers input. 
+Le dossier ``inputs/`` contient des exemples de fichiers input. 
 Le fichier input_all contient tous les mots clefs. La
 documentation est encore très sommaire.
 
 Pour utiliser le programme :
 
-  cargol -help 
-  	affiche une aide sommaire
+cargol -help 
+    affiche une aide sommaire
 
-  cargol input
-  	exécute le calcul demandé dans le fichier input. Le nom 
-	du fichier d'input n'a pas d'importance.
+cargol input
+    exécute le calcul demandé dans le fichier input. Le nom 
+    du fichier d'input n'a pas d'importance.
 
 Bonne simulation !
 
