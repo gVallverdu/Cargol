@@ -1,0 +1,232 @@
+% * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+% *
+% * fichier entete de cargol.tex
+% *
+% * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+
+% * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+% * 
+% * POLICE, ENCODAGE, LANGUE, FIGURES, COULEURS
+% * 
+% * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+
+\usepackage[svgnames]{xcolor}
+\usepackage{graphicx,rotating,float,tikz}
+
+\definecolor{turquoise}{rgb}{0 0.41 0.41}
+\definecolor{rouge}{rgb}{0.79 0.0 0.1}
+\definecolor{vert}{rgb}{0.15 0.4 0.1}
+\definecolor{mauve}{rgb}{0.6 0.4 0.8}
+\definecolor{violet}{rgb}{0.58 0. 0.41}
+\definecolor{orange}{rgb}{0.8 0.4 0.2}
+\definecolor{bleu}{rgb}{0.39 0.58 0.93}
+
+\usepackage{url}
+
+% * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+% * 
+% * MATHEMATIQUES
+% * 
+% * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+\usepackage{amsmath, amsfonts, amssymb}
+
+\setlength{\mathindent}{5ex} % position equation
+
+% * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+% * 
+% * FORMAT DES PARAGRAPHE, ELARGISSEMENT DES TABLEAUX
+% * 
+% * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+\setlength{\parskip}{1.5ex plus 0.5ex minus 0.5ex}	% espacement entre les paragraphes
+\setlength{\parindent}{0em}        			% pas d'indentation
+\usepackage{setspace}              			% pour gérer l'interligne
+
+\usepackage{supertabular}
+\usepackage{tabularx}
+
+\renewcommand{\arraystretch}{1.4}  			% élargir les tableaux
+
+% * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+% * 
+% * FOOTNOTE
+% * 
+% * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+\renewcommand{\thefootnote}{\alph{footnote}}  
+\newcounter{compteur}[page] 				% compteur asservis
+\setcounter{compteur}{0}   
+\newcommand{\myfoot}[1]{\hspace{0.5ex}\stepcounter{compteur}\footnote[\thecompteur]{#1}}
+\renewcommand{\footnoterule}{\vspace{0.1cm}\rule{0.45\textwidth}{0.5pt}\vspace{0.5mm}}
+
+% * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+% * 
+% * HYPERREF
+% * 
+% * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+\usepackage{hyperref}
+
+\hypersetup{% 
+pdftex,%			Sets up hyperref for use with the pdftex program
+colorlinks=true,% 		active les liens
+citecolor=RoyalBlue,
+linkcolor=RoyalBlue,
+pdfborder={0 0 0},%		bordure des liens
+pdfstartpage=1,%		page affichee a l'ouverture du pdf
+pdfauthor={Germain Vallverdu},%
+pdftitle={Code séquentiel de simulation de fluide simple},% 
+pdfcreator={PDFLaTeX},%
+pdfproducer={PDFLaTeX},%
+}
+
+% * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+% * 
+% * NOUVELLES COMMANDES
+% * 
+% * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+\usepackage{xspace}
+\newcommand{\eme}{$^{\text{ème}}$\xspace}%ième
+\newcommand{\er}{$^{\text{er}}$\xspace}		%premier
+\newcommand{\ere}{$^{\text{ère}}$\xspace}%première
+\renewcommand{\degre}{$^{\circ}$\xspace}		% degre
+\newcommand{\na}{\mathcal{N}_{a}\xspace}	% avogadro
+\newcommand{\kt}{k_{\textrm{B}}T\xspace}	% kBT
+
+\setlength\fboxsep{0pt}					% séparation text - contour
+\setlength\fboxrule{1.5pt}				% eppaisseur du trait
+
+% pour encadrer dans des equations
+\newcommand{\encq}[2]{%
+\tikz[baseline]{\node[rectangle,anchor=base,rounded corners,fill=#1]{#2};}}
+
+% pour encadrer du texte dans un cadre rouge
+\newcommand{\enc}[1]{%
+\begin{center}
+	\tikz{\node[rectangle,anchor=base,rounded corners,draw=rouge,thick,inner sep=2mm]{
+		\parbox{0.9\textwidth}{ #1 }};}
+\end{center}
+}
+
+\newcommand{\kw}[1]{ \textbf{\textsf{#1}} }
+
+\newfloat{codesource}{htbp}{src}[chapter]
+	% nom de mon nouvel environnement
+	% htbp sont les options de placement de mon flottant
+	% extension du fichier utilise pour construire la liste des flottants
+	% niveau duquel dependra la numerotation des flottants
+\floatname{codesource}{Code source} % titre du caption
+
+% * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+% * 
+% * DEFINITION DU TITRE
+% * 
+% * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+% * * * * * un titre simple aligné à droite dans une page
+\makeatletter
+\renewcommand{\maketitle}{
+	\rule{\textwidth}{1pt}
+	\vspace*{-8mm}
+	\begin{flushright}
+		\LARGE \bfseries \@title  \\
+		\vspace*{5mm}
+		\large \bfseries \@author \\
+		\vspace*{4mm}
+		\large \bfseries \@date \\
+		\vspace*{-3mm}
+	\end{flushright}
+	\rule{\textwidth}{1pt} \\
+}
+\makeatother
+
+% * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+% *
+% * format de la page
+% *
+% * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+\usepackage[nohead,top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm]{geometry}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{}                         % supprime toutes les entetes
+\fancyfoot{}                         % supprime tous les pieds de page
+\fancyfoot[LE,RO]{\footnotesize\thepage}          % le numero de page en bas a droite ou gauche
+\fancyfoot[LO,RE]{\footnotesize\sffamily\itshape Cargol : G. Vallverdu}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% redefini le syle plain
+\fancypagestyle{plain}{%
+\fancyhf{}                           % clear all header and footer fields
+\fancyfoot[RE,RO]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}}
+
+% * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+% *
+% * package listing
+% *
+% * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+\usepackage{listings}
+\lstset{% general command to set parameter(s)
+language=C,                                     % langage
+identifierstyle=,                               % rien
+basicstyle=\footnotesize\sffamily,              % style du texte
+stringstyle=\sffamily\color{green},             % styme typewriter pour string
+keywordstyle=\color{DarkRed}\bfseries,        % style des mots clef
+commentstyle=\color{RoyalBlue},                      % style commentaire
+backgroundcolor=\color{black!3},                  % couleur arrière plan
+}
+
+% * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+% *
+% * format titres et sections
+% *
+% * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+\usepackage{titlesec}
+% \titleformat{ command }[ shape ]{ format }{ label }{ sep }{ before }[ after ]
+% \titlespacing*{ command }{ left }{ dessus }{ apres }
+
+\titleformat{\chapter}[block]%
+{\LARGE\bfseries\sffamily\filleft}%	% format
+{\titlerule \\ \thechapter}%		% label
+{2ex}%					% séparation label
+{}%					% avant = (entre label et texte)
+[\vspace{1ex} \titlerule]		% après
+\titlespacing*{\chapter}{0cm}{0cm}{1cm}
+
+\newcounter{gsec}[chapter]
+\setcounter{gsec}{0}
+\titleformat{\section}{\normalfont\Large\bfseries}{\stepcounter{gsec}\thegsec}{1em}{}
+\titlespacing*{\section}{0ex}{3.5ex plus 1ex minus 0.2ex}{2.3ex plus .2ex}
+
+\newcounter{gsubsec}[section]
+\setcounter{gsubsec}{0}
+\titleformat{\subsection}{\normalfont\large\bfseries}{\stepcounter{gsubsec}\thegsec.\thegsubsec}{1em}{}
+\titlespacing*{\subsection}{0ex}{3.25ex plus 1ex minus 0.2ex}{1.5ex plus .2ex}
+
+\titleformat{\subsubsection}[hang]{\bfseries}{}{0ex}{}
+\titlespacing*{\subsubsection}{0ex}{2ex}{0ex}
+
+%\usepackage{titletoc}
+%\titlecontents{section}[10ex]{}{\sffamily\bfseries\Large\contentslabel{4ex}}{}
+%{\sffamily\titlerule*[0.5pc]{.}\contentspage}[\vspace*{5ex}]
+
+\usepackage{fncylab}
+\labelformat{figure}{\sffamily \figurename~#1}
+\labelformat{table}{\tablename~#1}
+\labelformat{equation}{\sffamily équation~#1}
+\labelformat{codesource}{\sffamily code source~#1}
+
+% * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *

@@ -38,7 +38,7 @@ différente.
 utilisation
 -----------
 
-Dans cargol/doc/input/ se trouve des exemples de fichiers input. 
+Le dossier inputs/ contient des exemples de fichiers input. 
 Le fichier input_all contient tous les mots clefs. La
 documentation est encore très sommaire.
 

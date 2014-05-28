@@ -1,0 +1,103 @@
+
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+  *                                                             *
+  *                         cargol                              *
+  *                                                             *
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+                              °\____       ________             
+                               /-   \     /  ____  \           
+                               \_    \   /  /    \  \     -- 
+                                 \    \ (   \__/  )  )    --  
+                                  \    \_\ \_____/  /__    --
+                                   \______\________/___'=-   
+
+
+
+ * depart      : Mon 11 h 08 m 01 s 
+ * initialisation des valeurs par defaut
+ * lecture du fichier d'entre           : input_DPDE 
+ * allocation de la memoire
+ * construction de la configuration initiale
+ * calcul des vitesses initiales
+ * construction des listes de voisins initiales
+ * calcul des forces initiales 
+ * initialisation des temperatures et energies internes initiales
+
+-----------------------------------------------------------------
+ * Donnees du calcul : 
+-----------------------------------------------------------------
+methode                    :       DPDE   
+temp0                      :       300.00 K     
+nstep                      :       1000   
+dt                         :      1.000 fs
+nave                       :          5   
+nout                       :         10   
+ncrd                       :          0   
+nvel                       :          0   
+ntemp_int                  :         10   
+graine                     :   15041983   
+
+-----------------------------------------------------------------
+ * Potentiel de paires : 
+-----------------------------------------------------------------
+sigma                      :      3.405 A 
+epsilon                    :      0.010 eV 
+rcut                       :      8.513 A 
+rverlet                    :     10.613 A 
+
+-----------------------------------------------------------------
+ * Configuration initiale : 
+-----------------------------------------------------------------
+cristal                    :     simple 
+parametre de maille        :    5.000 A
+nombre de mailles          : 10,10,10 
+dimension de la boite X    :   50.000 A
+dimension de la boite Y    :   50.000 A
+dimension de la boite Z    :   50.000 A
+
+-----------------------------------------------------------------
+ * grandeurs initiales : 
+-----------------------------------------------------------------
+nombre de particules       :       1000         
+temperature                :       300.00 K     
+masse totale               :   6.6331e-23 kg    
+volume                     :   1.2500e-25 m-3   
+masse volumique            :   5.3065e+02 kg.m-3
+energie potentielle totale :  -1.2235e+00 kJ/mol        Ep / particule :  -2.0315e-21 J
+energie cinetique totale   :   3.7420e+00 kJ/mol        Ec / particule :   6.2130e-21 J
+energie totale             :   2.5184e+00 kJ/mol        E  / particule :   4.1815e-21 J
+vitesse du centre de masse :   0.0000e+00 ,  0.0000e+00,   0.0000e+00   m.s-1
+
+-----------------------------------------------------------------
+ * dynamique DPDE : 
+-----------------------------------------------------------------
+
+resultats : mdout.dat 
+
+friction, xsi                      : 1.000000e-12 kg.s-1
+amplitude du terme aleatoire       : 2.878189e-09 N
+coefficient calorimetrique      Cv : 3.451655e-22 J.K-1
+temperature interne initiale       : 3.000000e+02 K 
+
+
+-----------------------------------------------------------------
+ * moyennes et fluctuations apres 1000 pas
+-----------------------------------------------------------------
+nombres de valeurs         :          201 
+temps total de simultaion  :   1.0000e+00 ps
+temperature                :   2.9784e+02 +-  7.9569e+00 K
+pression                   :   5.8659e+06 +-  5.8639e+06 Pa
+energie totale             :   2.3686e+00 +-  1.0772e-01 kJ/mol
+energie cinetique totale   :   3.7151e+00 +-  9.9247e-02 kJ/mol
+energie potentielle totale :  -1.3464e+00 +-  4.9718e-02 kJ/mol
+energie interne totale     :   1.0783e-16 +-  1.7885e-19 kJ/mol
+temperature interne totale :   3.0016e+02 +-  5.8597e-01 kJ/mol
+
+
+-----------------------------------------------------------------
+ * fin               : Mon 11 h 08 m 11 s 
+ * temps d'execution : 8.520000 s   (0 h 0 m 8 s)
+-----------------------------------------------------------------
+

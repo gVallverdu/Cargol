@@ -1,0 +1,95 @@
+
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+  *                                                             *
+  *                         cargol                              *
+  *                                                             *
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+                              °\____       ________             
+                               /-   \     /  ____  \           
+                               \_    \   /  /    \  \     -- 
+                                 \    \ (   \__/  )  )    --  
+                                  \    \_\ \_____/  /__    --
+                                   \______\________/___'=-   
+
+
+
+ * depart      : Mon 11 h 05 m 35 s 
+ * initialisation des valeurs par defaut
+ * lecture du fichier d'entre           : input_langevin_restart 
+ * allocation de la memoire
+ * lecture des posisitions et des vitesses sur le fichier :    fichier_restart
+ * construction des listes de voisins initiales
+ * calcul des forces initiales 
+
+-----------------------------------------------------------------
+ * Donnees du calcul : 
+-----------------------------------------------------------------
+methode                    :   langevin   
+temp0                      :       300.00 K     
+nstep                      :       1000   
+dt                         :      1.000 fs
+nave                       :          5   
+nout                       :         10   
+ncrd                       :          0   
+nvel                       :          0   
+graine                     :   15041983   
+
+-----------------------------------------------------------------
+ * Potentiel de paires : 
+-----------------------------------------------------------------
+sigma                      :      3.405 A 
+epsilon                    :      0.010 eV 
+rcut                       :      8.513 A 
+rverlet                    :     10.613 A 
+
+-----------------------------------------------------------------
+ * Configuration initiale : 
+-----------------------------------------------------------------
+lue sur le fichier         : fichier_restart 
+dimension de la boite X    :   50.000 A
+dimension de la boite Y    :   50.000 A
+dimension de la boite Z    :   50.000 A
+
+-----------------------------------------------------------------
+ * grandeurs initiales : 
+-----------------------------------------------------------------
+nombre de particules       :       1000         
+temperature                :       311.64 K     
+masse totale               :   6.6331e-23 kg    
+volume                     :   1.2500e-25 m-3   
+masse volumique            :   5.3065e+02 kg.m-3
+energie potentielle totale :  -1.3913e+00 kJ/mol        Ep / particule :  -2.3101e-21 J
+energie cinetique totale   :   3.8872e+00 kJ/mol        Ec / particule :   6.4541e-21 J
+energie totale             :   2.4958e+00 kJ/mol        E  / particule :   4.1440e-21 J
+vitesse du centre de masse :  -1.8826e+01 , -1.6519e+01,   8.8153e-01   m.s-1
+
+-----------------------------------------------------------------
+ * dynamique langevin : 
+-----------------------------------------------------------------
+
+resultats : mdout.dat 
+
+friction, xsi                     : 1.000000e-12 kg.s-1
+parametre langevin sans dimension : 9.850372e-01
+amplitude du terme aleatoire      : 4.306610e+01 m.s-1
+
+
+-----------------------------------------------------------------
+ * moyennes et fluctuations apres 1000 pas
+-----------------------------------------------------------------
+nombres de valeurs         :          201 
+temps total de simultaion  :   1.0000e+00 ps
+temperature                :   3.0126e+02 +-  8.9587e+00 K
+pression                   :   4.0852e+07 +-  6.7537e+06 Pa
+energie totale             :   2.3866e+00 +-  1.1927e-01 kJ/mol
+energie cinetique totale   :   3.7614e+00 +-  1.1245e-01 kJ/mol
+energie potentielle totale :  -1.3748e+00 +-  5.3420e-02 kJ/mol
+
+
+-----------------------------------------------------------------
+ * fin               : Mon 11 h 05 m 37 s 
+ * temps d'execution : 1.320000 s   (0 h 0 m 1 s)
+-----------------------------------------------------------------
+

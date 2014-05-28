@@ -1,0 +1,94 @@
+
+
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+  *                                                             *
+  *                         cargol                              *
+  *                                                             *
+  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+                              °\____       ________             
+                               /-   \     /  ____  \           
+                               \_    \   /  /    \  \     -- 
+                                 \    \ (   \__/  )  )    --  
+                                  \    \_\ \_____/  /__    --
+                                   \______\________/___'=-   
+
+
+
+ * depart      : Mon 11 h 06 m 38 s 
+ * initialisation des valeurs par defaut
+ * lecture du fichier d'entre           : input_NVE 
+ * allocation de la memoire
+ * construction de la configuration initiale
+ * calcul des vitesses initiales
+ * construction des listes de voisins initiales
+ * calcul des forces initiales 
+
+-----------------------------------------------------------------
+ * Donnees du calcul : 
+-----------------------------------------------------------------
+methode                    :        NVE   
+temp0                      :       300.00 K     
+nstep                      :       1000   
+dt                         :      1.000 fs
+nave                       :          5   
+nout                       :         10   
+ncrd                       :          0   
+nvel                       :          0   
+graine                     :   15041983   
+
+-----------------------------------------------------------------
+ * Potentiel de paires : 
+-----------------------------------------------------------------
+sigma                      :      3.405 A 
+epsilon                    :      0.010 eV 
+rcut                       :      8.513 A 
+rverlet                    :     10.613 A 
+
+-----------------------------------------------------------------
+ * Configuration initiale : 
+-----------------------------------------------------------------
+cristal                    :     simple 
+parametre de maille        :    5.000 A
+nombre de mailles          : 10,10,10 
+dimension de la boite X    :   50.000 A
+dimension de la boite Y    :   50.000 A
+dimension de la boite Z    :   50.000 A
+
+-----------------------------------------------------------------
+ * grandeurs initiales : 
+-----------------------------------------------------------------
+nombre de particules       :       1000         
+temperature                :       300.00 K     
+masse totale               :   6.6331e-23 kg    
+volume                     :   1.2500e-25 m-3   
+masse volumique            :   5.3065e+02 kg.m-3
+energie potentielle totale :  -1.2235e+00 kJ/mol        Ep / particule :  -2.0315e-21 J
+energie cinetique totale   :   3.7420e+00 kJ/mol        Ec / particule :   6.2130e-21 J
+energie totale             :   2.5184e+00 kJ/mol        E  / particule :   4.1815e-21 J
+vitesse du centre de masse :   0.0000e+00 ,  0.0000e+00,   0.0000e+00   m.s-1
+
+-----------------------------------------------------------------
+ * dynamique NVE : 
+-----------------------------------------------------------------
+
+resultats : mdout.dat 
+
+
+-----------------------------------------------------------------
+ * moyennes et fluctuations apres 1000 pas
+-----------------------------------------------------------------
+nombres de valeurs         :          201 
+temps total de simultaion  :   1.0000e+00 ps
+temperature                :   3.1066e+02 +-  1.0800e+01 K
+pression                   :   3.2328e+07 +-  1.6581e+07 Pa
+energie totale             :   2.5184e+00 +-  2.9984e-06 kJ/mol
+energie cinetique totale   :   3.8749e+00 +-  1.3471e-01 kJ/mol
+energie potentielle totale :  -1.3565e+00 +-  1.3472e-01 kJ/mol
+
+
+-----------------------------------------------------------------
+ * fin               : Mon 11 h 06 m 39 s 
+ * temps d'execution : 1.130000 s   (0 h 0 m 1 s)
+-----------------------------------------------------------------
+
